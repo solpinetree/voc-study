@@ -20,5 +20,6 @@ public class User {
     @Setter private String password;
 
     @Enumerated(EnumType.STRING)
+    @Setter
     private Role role;
 }
