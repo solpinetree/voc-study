@@ -1,7 +1,11 @@
 package com.sha.serverproductmanagement.model;
 
+import lombok.Getter;
+import lombok.Setter;
+
 import javax.persistence.*;
 
+@Getter
 @Entity
 @Table(name="user")
 public class User {
@@ -12,7 +16,8 @@ public class User {
 
     private String name;
     private String username;
-    private String password;
+    // TODO: setPassword 변경
+    @Setter private String password;
 
     @Enumerated(EnumType.STRING)
     private Role role;
